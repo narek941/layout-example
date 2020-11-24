@@ -2,13 +2,39 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Home, Users, Repositories, About } from "./views";
+import { Header, Footer } from "./components/common";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <>
-    <App/>
-  </>,
+  <Router>
+    <Header />
+    <Switch>
+      <Route
+        exact
+        component={Home}
+        path="/home"
+      />
+
+      <Route
+        exact
+        path="/repositories"
+        component={Repositories}
+      />
+
+      <Route
+        exact
+        path="/users"
+        component={Users}
+      />
+
+      <Route exact path="/" component={Home} />
+    </Switch>
+    <Footer />
+  </Router>,
   document.getElementById('root')
+
 );
 
 // If you want to start measuring performance in your app, pass a function
