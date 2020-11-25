@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Home, Users, Repositories} from "./containers/views";
-import {MainLayout} from "./containers/layouts";
+import {Home, Users, Repositories, MainLayout} from "./containers";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
