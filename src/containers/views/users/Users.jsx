@@ -5,17 +5,17 @@ import {AccountCircle} from '@material-ui/icons';
 const Users = () => {
 
   const [value, setValue] = useState('');
-  
+  const [username, setUsername] = useState({});
+
   useEffect(() => {
-    console.log("1");
+    const datas= fetch(`https://api.github.com/users/${value}`)
+  .then(response => response.json())
+  .then(data => console.log(data));
 
-    // let userdata=()=>fetch(`https://api.github.com/users/${value}`)
-    // .then(response => response.json())
-    // .then(response => {
-    //   return response;
-    //  })  
+  setUsername(JSON.stringify(datas));
+    console.log(username.login)
     },[value]);
-
+    
   return(
     <>
       <TextField
@@ -35,6 +35,7 @@ const Users = () => {
         }}
         value={value}
       />
+      <TextField value ={username}/>
     </>
   )
 }
