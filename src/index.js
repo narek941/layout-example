@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { Home, Users, Repositories, About } from "./views";
+import { Home, Users, Repositories,MainLayout } from "./containers";
 import { Header, Footer } from "./components/common";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Router>
-    <Header />
+    <MainLayout>
     <Switch>
       <Route
         exact
@@ -29,8 +27,13 @@ ReactDOM.render(
         component={Users}
       />
 
-      <Route exact path="/" component={Home} />
+      <Route
+        exact
+        path="/"
+        component={Home} />
+
     </Switch>
+    </MainLayout>
     <Footer />
   </Router>,
   document.getElementById('root')
