@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.css';
+import {CourseButton} from '../../index';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdbreact';
 
 const Footer = () => {
@@ -9,27 +10,10 @@ const Footer = () => {
       <MDBContainer>
         <MDBRow>
           <MDBCol md="6">
-            <h5>Footer Content</h5>
-            <p>
-              Here you can use rows and columns here to organize your footer
-              content.
-            </p>
-          </MDBCol>
-          <MDBCol md="6">
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">About</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Help</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Contact</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Terms</a>
-              </li>
-            </ul>
+              <CourseButton type='navigation' to="/about">About</CourseButton>
+              <CourseButton type='navigation' to="/help">Help</CourseButton>
+              <CourseButton type='navigation' to="/contact">Contact</CourseButton>
+              <CourseButton type='navigation' to="/terms">Terms</CourseButton>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

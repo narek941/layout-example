@@ -1,9 +1,11 @@
-import {Home, Repositories, Users} from './views';
-import {MainLayout} from './layouts';
+import {Home, Repositories, Users, About, Help} from './views';
+import {MainLayout} from './layouts'; 
 
 export {
   Home,
   Repositories,
   Users,
   MainLayout,
+  About,
+  Help,
 }

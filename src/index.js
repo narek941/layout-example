@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home, Users, Repositories,MainLayout } from "./containers";
+import { Home, Users, Repositories, MainLayout,About, Help } from "./containers";
 import { Header, Footer } from "./components/common";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
@@ -8,31 +8,38 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <Router>
     <MainLayout>
-    <Switch>
-      <Route
-        exact
-        component={Home}
-        path="/home"
-      />
+      <Switch>
+        <Route
+          exact
+          component={Home}
+          path="/home"
+        />
 
-      <Route
-        exact
-        path="/repositories"
-        component={Repositories}
-      />
+        <Route
+          exact
+          path="/repositories"
+          component={Repositories}
+        />
 
-      <Route
-        exact
-        path="/users"
-        component={Users}
-      />
+        <Route
+          exact
+          path="/users"
+          component={Users}
+        />
 
-      <Route
-        exact
-        path="/"
-        component={Home} />
-
-    </Switch>
+        <Route
+          exact
+          path="/"
+          component={Home} />
+        <Route
+          exact
+          path="/about"
+          component={About} />
+          <Route
+          exact
+          path="/help"
+          component={Help} />
+      </Switch>
     </MainLayout>
     <Footer />
   </Router>,
